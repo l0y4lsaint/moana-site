@@ -47,24 +47,39 @@
   <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
     <!-- Esquerda: Logo clicável -->
-    <div class="flex-shrink-0">
-      <a href="#top" class="block">
-        <img src="assets/moana-logo.png" alt="Logotipo Moana" class="h-12" />
-      </a>
-    </div>
+    <a href="#top" class="flex-shrink-0 block">
+      <img src="assets/moana-logo.png" alt="Logotipo Moana" class="h-12" />
+    </a>
 
-    <!-- Centro: Menu de navegação -->
-    <ul class="flex-1 flex justify-center gap-8 text-white font-semibold text-sm">
-      <li><a href="#why" class="hover:underline transition">Por que a Moana?</a></li>
-      <li><a href="#companies" class="hover:underline transition">Para Empresas</a></li>
-      <li><a href="#emissions" class="hover:underline transition">Emissões</a></li>
-      <li><a href="#wishlist" class="hover:underline transition">Lista de Espera</a></li>
-      <li><a href="#about" class="hover:underline transition">Sobre Nós</a></li>
-      <li><a href="#faq" class="hover:underline transition">Perguntas Frequentes</a></li>
+    <!-- Botão hamburguer (aparece só no mobile) -->
+    <button id="menu-toggle" class="text-white text-2xl md:hidden focus:outline-none">
+      ☰
+    </button>
+
+    <!-- Itens do menu -->
+    <ul id="menu-items"
+      class="hidden absolute top-20 left-0 w-full bg-moana px-6 py-4 space-y-4 text-white text-sm font-semibold md:flex md:static md:w-auto md:space-y-0 md:space-x-8 md:bg-transparent md:px-0 md:py-0 md:text-white">
+      <li><a href="#why" class="block hover:underline transition">Por que a Moana?</a></li>
+      <li><a href="#companies" class="block hover:underline transition">Para Empresas</a></li>
+      <li><a href="#emissions" class="block hover:underline transition">Emissões</a></li>
+      <li><a href="#wishlist" class="block hover:underline transition">Lista de Espera</a></li>
+      <li><a href="#about" class="block hover:underline transition">Sobre Nós</a></li>
+      <li><a href="#faq" class="block hover:underline transition">Perguntas Frequentes</a></li>
+
+      <!-- Versão mobile: seletor de idioma dentro do menu -->
+      <li class="md:hidden">
+        <select onchange="location.href=this.value"
+          class="w-full bg-moana border border-white rounded px-3 py-2 text-sm text-white font-semibold">
+          <option value="pt-index.html">🇵🇹 Português</option>
+          <option value="index.html">🌐 English</option>
+          <option value="es-index.html">🇪🇸 Español</option>
+          <option value="cn-index.html">🇨🇳 中文</option>
+        </select>
+      </li>
     </ul>
 
-    <!-- Direita: Seletor de idioma -->
-    <div>
+    <!-- Versão desktop: seletor de idioma visível -->
+    <div class="hidden md:block">
       <select onchange="location.href=this.value"
         class="bg-moana border border-white rounded px-3 py-2 text-sm text-white font-semibold">
         <option value="pt-index.html">🇵🇹 Português</option>
@@ -76,15 +91,24 @@
   </div>
 </nav>
 
-<!-- Âncora invisível para o logotipo -->
+<!-- Âncora invisível para o scroll até o topo -->
 <div id="top"></div>
 
-<!-- Rolagem suave -->
+<!-- Estilo para rolagem suave -->
 <style>
   html {
     scroll-behavior: smooth;
   }
 </style>
+
+<!-- Script do menu hamburguer -->
+<script>
+  const toggleButton = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu-items');
+  toggleButton.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
 
 <div class="pt-20"></div>
 
