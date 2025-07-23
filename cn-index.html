@@ -47,25 +47,40 @@
 <nav class="bg-moana fixed top-0 left-0 w-full z-50 shadow-md">
   <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
-    <!-- 左侧：Logo（可点击返回顶部） -->
-    <div class="flex-shrink-0">
-      <a href="#top" class="block">
-        <img src="assets/moana-logo.png" alt="Moana标志" class="h-12" />
-      </a>
-    </div>
+    <!-- 左侧：点击返回顶部的 logo -->
+    <a href="#top" class="flex-shrink-0 block">
+      <img src="assets/moana-logo.png" alt="Moana标志" class="h-12" />
+    </a>
 
-    <!-- 中间：导航链接 -->
-    <ul class="flex-1 flex justify-center gap-8 text-white font-semibold text-sm">
-      <li><a href="#why" class="hover:underline transition">为什么选择 Moana？</a></li>
-      <li><a href="#companies" class="hover:underline transition">适用于企业</a></li>
-      <li><a href="#emissions" class="hover:underline transition">碳排放</a></li>
-      <li><a href="#wishlist" class="hover:underline transition">候补名单</a></li>
-      <li><a href="#about" class="hover:underline transition">关于我们</a></li>
-      <li><a href="#faq" class="hover:underline transition">常见问题</a></li>
+    <!-- 汉堡按钮（仅在移动端显示） -->
+    <button id="menu-toggle" class="text-white text-2xl md:hidden focus:outline-none">
+      ☰
+    </button>
+
+    <!-- 菜单内容 -->
+    <ul id="menu-items"
+      class="hidden absolute top-20 left-0 w-full bg-moana px-6 py-4 space-y-4 text-white text-sm font-semibold md:flex md:static md:w-auto md:space-y-0 md:space-x-8 md:bg-transparent md:px-0 md:py-0 md:text-white">
+      <li><a href="#why" class="block hover:underline transition">为什么选择 Moana？</a></li>
+      <li><a href="#companies" class="block hover:underline transition">适用于企业</a></li>
+      <li><a href="#emissions" class="block hover:underline transition">碳排放</a></li>
+      <li><a href="#wishlist" class="block hover:underline transition">候补名单</a></li>
+      <li><a href="#about" class="block hover:underline transition">关于我们</a></li>
+      <li><a href="#faq" class="block hover:underline transition">常见问题</a></li>
+
+      <!-- 移动端：语言选择器 -->
+      <li class="md:hidden">
+        <select onchange="location.href=this.value"
+          class="w-full bg-moana border border-white rounded px-3 py-2 text-sm text-white font-semibold">
+          <option value="cn-index.html">🇨🇳 中文</option>
+          <option value="index.html">🌐 English</option>
+          <option value="pt-index.html">🇵🇹 Português</option>
+          <option value="es-index.html">🇪🇸 Español</option>
+        </select>
+      </li>
     </ul>
 
-    <!-- 右侧：语言选择器 -->
-    <div>
+    <!-- 桌面端：语言选择器 -->
+    <div class="hidden md:block">
       <select onchange="location.href=this.value"
         class="bg-moana border border-white rounded px-3 py-2 text-sm text-white font-semibold">
         <option value="cn-index.html">🇨🇳 中文</option>
@@ -86,6 +101,15 @@
     scroll-behavior: smooth;
   }
 </style>
+
+<!-- 汉堡按钮开关脚本 -->
+<script>
+  const toggleButton = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu-items');
+  toggleButton.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
 
   <div class="pt-20"></div>
 
