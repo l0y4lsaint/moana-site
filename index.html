@@ -46,45 +46,69 @@
 <nav class="bg-moana fixed top-0 left-0 w-full z-50 shadow-md">
   <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
-    <!-- Left: Logo (clickable) -->
-    <div class="flex-shrink-0">
-      <a href="#top" class="block">
-        <img src="assets/moana-logo.png" alt="Moana logo" class="h-12" />
-      </a>
-    </div>
+    <!-- Left: Clickable Logo -->
+    <a href="#top" class="flex-shrink-0 block">
+      <img src="assets/moana-logo.png" alt="Moana logo" class="h-12" />
+    </a>
 
-    <!-- Center: Navigation menu -->
-    <ul class="flex-1 flex justify-center gap-8 text-white font-semibold text-sm">
-      <li><a href="#why" class="hover:underline transition">Why Moana?</a></li>
-      <li><a href="#companies" class="hover:underline transition">For Companies</a></li>
-      <li><a href="#emissions" class="hover:underline transition">Emissions</a></li>
-      <li><a href="#wishlist" class="hover:underline transition">Wishlist</a></li>
-      <li><a href="#about" class="hover:underline transition">About</a></li>
-      <li><a href="#faq" class="hover:underline transition">FAQs</a></li>
+    <!-- Mobile: Hamburger Toggle -->
+    <button id="menu-toggle" class="text-white text-2xl md:hidden focus:outline-none">
+      ☰
+    </button>
+
+    <!-- Menu Items -->
+    <ul id="menu-items"
+      class="hidden absolute top-20 left-0 w-full bg-moana px-6 py-4 space-y-4 text-white text-sm font-semibold md:flex md:static md:w-auto md:space-y-0 md:space-x-8 md:bg-transparent md:px-0 md:py-0 md:text-white">
+      <li><a href="#why" class="block hover:underline transition">Why Moana?</a></li>
+      <li><a href="#companies" class="block hover:underline transition">For Companies</a></li>
+      <li><a href="#emissions" class="block hover:underline transition">Emissions</a></li>
+      <li><a href="#wishlist" class="block hover:underline transition">Wishlist</a></li>
+      <li><a href="#about" class="block hover:underline transition">About Us</a></li>
+      <li><a href="#faq" class="block hover:underline transition">FAQs</a></li>
+
+      <!-- Language Switch for Mobile -->
+      <li class="md:hidden">
+        <select onchange="location.href=this.value"
+          class="w-full bg-moana border border-white rounded px-3 py-2 text-sm text-white font-semibold">
+          <option value="index.html">🌐 English</option>
+          <option value="pt-index.html">🇵🇹 Portuguese</option>
+          <option value="es-index.html">🇪🇸 Spanish</option>
+          <option value="cn-index.html">🇨🇳 Chinese</option>
+        </select>
+      </li>
     </ul>
 
-    <!-- Right: Language selector -->
-    <div>
+    <!-- Language Switch for Desktop -->
+    <div class="hidden md:block">
       <select onchange="location.href=this.value"
         class="bg-moana border border-white rounded px-3 py-2 text-sm text-white font-semibold">
         <option value="index.html">🌐 English</option>
-        <option value="pt-index.html">🇵🇹 Português</option>
-        <option value="es-index.html">🇪🇸 Español</option>
-        <option value="cn-index.html">🇨🇳 中文</option>
+        <option value="pt-index.html">🇵🇹 Portuguese</option>
+        <option value="es-index.html">🇪🇸 Spanish</option>
+        <option value="cn-index.html">🇨🇳 Chinese</option>
       </select>
     </div>
   </div>
 </nav>
 
-<!-- Invisible top anchor (used by logo link) -->
+<!-- Top Anchor for Logo Scroll -->
 <div id="top"></div>
 
-<!-- Optional: smooth scroll behavior -->
+<!-- Smooth Scroll -->
 <style>
   html {
     scroll-behavior: smooth;
   }
 </style>
+
+<!-- Hamburger Script -->
+<script>
+  const toggleButton = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu-items');
+  toggleButton.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
 
 <div class="pt-20"></div>
 
