@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gracias | Moana</title>
+
+  <!-- Tipografía y Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            moana: '#5170FF',
+          },
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: 0, transform: 'translateY(30px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' },
+            }
+          },
+          animation: {
+            fadeInUp: 'fadeInUp 1s ease-out forwards',
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="font-sans bg-moana text-white flex items-center justify-center h-screen overflow-hidden">
+
+  <!-- Fondo oceánico en video -->
+  <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover -z-20">
+    <source src="assets/oceanbackground.mp4" type="video/mp4" />
+  </video>
+  <div class="absolute inset-0 bg-black/60 -z-10"></div>
+
+  <!-- Mensaje de agradecimiento -->
+  <div class="max-w-xl text-center px-6 animate-fadeInUp">
+    <h1 class="text-4xl font-bold mb-6">🌊 ¡Gracias por unirte a Moana!</h1>
+    <p class="text-lg mb-8">
+      Has dado el primer paso hacia la regeneración de los océanos y un impacto real.  
+      Te mantendremos informado mientras nos preparamos para zarpar — ¡grandes cosas vienen!
+    </p>
+    <a href="es-index.html"
+      class="inline-block bg-white text-moana font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-gray-100 transition">
+      ⬅ Volver al inicio
+    </a>
+  </div>
+
+</body>
+</html>

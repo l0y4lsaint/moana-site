@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Moana | Regenerando Oceanos</title>
+
+  <!-- Fontes e Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            moana: '#5170FF',
+          },
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 7rem;
+    }
+  </style>
+
+  <script>
+  function toggleFAQ(index) {
+    const el = document.getElementById('faq' + index);
+    el.classList.toggle('hidden');
+  }
+</script>
+
+</head>
+<body class="font-sans bg-white text-black">
+
+  <div id="moana-cursor" class="fixed w-6 h-6 bg-moana rounded-full pointer-events-none z-50 transition-transform duration-100 ease-out"></div>
+
+  <!-- Navbar -->
+<nav class="bg-moana fixed top-0 left-0 w-full z-50 shadow-md">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    <!-- Esquerda: Logo clicável -->
+    <div class="flex-shrink-0">
+      <a href="#top" class="block">
+        <img src="assets/moana-logo.png" alt="Logotipo Moana" class="h-12" />
+      </a>
+    </div>
+
+    <!-- Centro: Menu de navegação -->
+    <ul class="flex-1 flex justify-center gap-8 text-white font-semibold text-sm">
+      <li><a href="#why" class="hover:underline transition">Por que a Moana?</a></li>
+      <li><a href="#companies" class="hover:underline transition">Para Empresas</a></li>
+      <li><a href="#emissions" class="hover:underline transition">Emissões</a></li>
+      <li><a href="#wishlist" class="hover:underline transition">Lista de Espera</a></li>
+      <li><a href="#about" class="hover:underline transition">Sobre Nós</a></li>
+      <li><a href="#faq" class="hover:underline transition">Perguntas Frequentes</a></li>
+    </ul>
+
+    <!-- Direita: Seletor de idioma -->
+    <div>
+      <select onchange="location.href=this.value"
+        class="bg-moana border border-white rounded px-3 py-2 text-sm text-white font-semibold">
+        <option value="pt-index.html">🇵🇹 Português</option>
+        <option value="index.html">🌐 English</option>
+        <option value="es-index.html">🇪🇸 Español</option>
+        <option value="cn-index.html">🇨🇳 中文</option>
+      </select>
+    </div>
+  </div>
+</nav>
+
+<!-- Âncora invisível para o logotipo -->
+<div id="top"></div>
+
+<!-- Rolagem suave -->
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
+
+<div class="pt-20"></div>
+
+  <!-- Hero -->
+  <section class="relative text-center py-64 px-6 text-white overflow-hidden">
+    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover -z-20">
+      <source src="assets/oceanbackground.mp4" type="video/mp4" />
+    </video>
+    <div class="absolute inset-0 bg-black opacity-50 -z-10"></div>
+    <div class="max-w-3xl mx-auto relative z-10">
+      <h1 class="text-4xl font-bold mb-4">Regenerando Oceanos. Redefinindo o Futuro.</h1>
+      <p class="text-lg mb-8">
+        Moana é a primeira plataforma digital que conecta empresas a projetos verificados de carbono azul com impacto escalável.
+      </p>
+      <a href="#wishlist" class="inline-block bg-moana text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition shadow-lg">
+        Junte-se ao Movimento
+      </a>
+    </div>
+  </section>
+
+  <!-- Por que a Moana -->
+  <section id="why" class="py-20 px-6 bg-white text-black text-center">
+    <h2 class="text-3xl font-bold mb-4">Por que a Moana existe?</h2>
+    <p class="text-lg font-semibold text-moana mb-12">Transformamos o oceano em uma oportunidade de investimento.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+      <div class="p-6 border rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="text-lg font-semibold mb-3">♻️ Carbono Azul Verificado</h3>
+        <p class="text-sm">Projetos que restauram ecossistemas marinhos e removem carbono com credibilidade.</p>
+      </div>
+      <div class="p-6 border rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="text-lg font-semibold mb-3">🌍 Impacto Social e Ambiental</h3>
+        <p class="text-sm">Apoiamos comunidades costeiras e protegemos a biodiversidade dos oceanos.</p>
+      </div>
+      <div class="p-6 border rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="text-lg font-semibold mb-3">🔗 Transparência com Blockchain</h3>
+        <p class="text-sm">Cada crédito é rastreável, seguro e confiável para empresas e investidores.</p>
+      </div>
+      <div class="p-6 border rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="text-lg font-semibold mb-3">🌊 Oceanos como Investimento</h3>
+        <p class="text-sm">Transformamos regeneração marinha em oportunidades reais e acessíveis.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Empresas -->
+  <section id="companies" class="py-20 px-6 bg-gray-100 text-center text-black">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6">Atinja suas metas ambientais com a Moana</h2>
+      <p class="mb-8">
+        Empresas conscientes estão investindo em carbono azul — não apenas para compensar, mas como compromisso com o planeta.
+      </p>
+      <a href="#wishlist" class="inline-block bg-moana text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition shadow-lg">
+        Entrar na Lista de Espera
+      </a>
+    </div>
+  </section>
+
+  <!-- Emissões -->
+  <section id="emissions" class="py-20 px-6 bg-moana text-white text-center">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6">Sua empresa tem altas emissões de carbono?</h2>
+      <p class="mb-8 text-lg">
+        Turismo costeiro, logística marítima, plataformas offshore — nós transformamos sua alta pegada ambiental em vida azul.
+        Invista em projetos verificados que restauram habitats, absorvem carbono e fortalecem sua jornada ESG.
+      </p>
+      <a href="#wishlist" class="inline-block bg-white text-moana px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg">
+        Explorar Projetos
+      </a>
+    </div>
+  </section>
+
+  <!-- Seção: Entrar na Lista de Espera -->
+<section id="wishlist" class="py-20 px-6 bg-white text-black">
+  <div class="max-w-xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-6">Entrar na Lista de Espera</h2>
+    <p class="mb-8">Seja um dos primeiros a saber quando a Moana for lançada.</p>
+
+    <form action="https://formsubmit.co/fdf78cfb57c803f81c0440e26f4f7762" method="POST"
+      class="bg-gray-100 p-8 rounded-xl shadow-lg space-y-6 text-left">
+      
+      <!-- Configurações do formulário -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="http://127.0.0.1:5500/pt-thankyou.html">
+
+      <!-- Campos do formulário -->
+      <div>
+        <label for="name" class="block text-sm font-medium mb-1">Nome</label>
+        <input type="text" id="name" name="name" required
+          class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-moana" />
+      </div>
+      <div>
+        <label for="email" class="block text-sm font-medium mb-1">Email</label>
+        <input type="email" id="email" name="email" required
+          class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-moana" />
+      </div>
+      <div>
+        <label for="profile" class="block text-sm font-medium mb-1">Você é:</label>
+        <select id="profile" name="profile" required
+          class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-moana">
+          <option value="">Selecione uma opção</option>
+          <option value="company">Empresa</option>
+          <option value="investor">Investidor</option>
+          <option value="project">Projeto Ambiental</option>
+          <option value="other">Outro</option>
+        </select>
+      </div>
+      <div class="flex items-center space-x-3">
+        <input type="checkbox" id="updates" name="updates" class="w-5 h-5 text-moana" />
+        <label for="updates" class="text-sm">Quero receber atualizações por email</label>
+      </div>
+      <button type="submit"
+        class="w-full bg-moana text-white py-4 rounded-lg font-bold hover:bg-blue-700 transition">
+        Enviar
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- Seção: Sobre Nós -->
+<section id="about" class="py-20 px-6 text-center bg-gray-100 text-black">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6">Quem Somos?</h2>
+    <p class="text-lg leading-relaxed">
+      A Moana nasceu para transformar a relação entre empresas, natureza e o futuro.  
+      Ao unir ciência, inovação e regeneração costeira, aceleramos soluções reais para a crise climática — restaurando oceanos e ampliando impacto social em escala global.
+    </p>
+  </div>
+</section>
+
+<section id="faq" class="py-20 px-6 bg-white text-black">
+  <div class="max-w-3xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-6">Perguntas Frequentes</h2>
+    <p class="text-lg mb-12">Quer entender melhor a Moana? Veja as dúvidas mais comuns abaixo.</p>
+
+    <div class="space-y-4 text-left">
+      <div class="border rounded-lg overflow-hidden">
+        <button class="w-full text-left px-6 py-4 font-semibold flex justify-between items-center hover:bg-gray-50 focus:outline-none" onclick="toggleFAQ(0)">
+          🌊 O que é carbono azul?
+          <span>+</span>
+        </button>
+        <div class="px-6 pb-4 hidden" id="faq0">
+          <p class="text-sm text-gray-700">
+            Carbono azul é o carbono capturado por ecossistemas costeiros como manguezais, pradarias marinhas e marismas. Esses ambientes armazenam CO₂ naturalmente e protegem a biodiversidade e o litoral.
+          </p>
+        </div>
+      </div>
+      <div class="border rounded-lg overflow-hidden">
+        <button class="w-full text-left px-6 py-4 font-semibold flex justify-between items-center hover:bg-gray-50" onclick="toggleFAQ(1)">
+          📥 O que acontece com as informações que envio?
+          <span>+</span>
+        </button>
+        <div class="px-6 pb-4 hidden" id="faq1">
+          <p class="text-sm text-gray-700">
+            Seus dados são usados apenas para avisos sobre o lançamento e novidades do Moana. Nunca compartilhamos com terceiros ou enviamos spam.
+          </p>
+        </div>
+      </div>
+      <div class="border rounded-lg overflow-hidden">
+        <button class="w-full text-left px-6 py-4 font-semibold flex justify-between items-center hover:bg-gray-50" onclick="toggleFAQ(2)">
+          🎯 A Moana é uma ONG?
+          <span>+</span>
+        </button>
+        <div class="px-6 pb-4 hidden" id="faq2">
+          <p class="text-sm text-gray-700">
+            Não. A Moana é uma empresa com propósito, que une inovação climática, regeneração oceânica e impacto escalável — com base em tecnologia ética.
+          </p>
+        </div>
+      </div>
+      <div class="border rounded-lg overflow-hidden">
+        <button class="w-full text-left px-6 py-4 font-semibold flex justify-between items-center hover:bg-gray-50" onclick="toggleFAQ(3)">
+          💼 Como posso participar ou colaborar?
+          <span>+</span>
+        </button>
+        <div class="px-6 pb-4 hidden" id="faq3">
+          <p class="text-sm text-gray-700">
+            Você pode se inscrever na lista de espera, sugerir um projeto, ou buscar parcerias. Estamos abertos a colaborações positivas.
+          </p>
+        </div>
+      </div>
+      <div class="border rounded-lg overflow-hidden">
+        <button class="w-full text-left px-6 py-4 font-semibold flex justify-between items-center hover:bg-gray-50" onclick="toggleFAQ(4)">
+          📊 Como funcionam os projetos de impacto da Moana?
+          <span>+</span>
+        </button>
+        <div class="px-6 pb-4 hidden" id="faq4">
+          <p class="text-sm text-gray-700">
+            Trabalhamos com projetos verificados que restauram ecossistemas costeiros. Cada ação é medida, auditada e alinhada com padrões globais.
+          </p>
+        </div>
+      </div>
+      <div class="border rounded-lg overflow-hidden">
+        <button class="w-full text-left px-6 py-4 font-semibold flex justify-between items-center hover:bg-gray-50" onclick="toggleFAQ(5)">
+          🔐 A plataforma é segura e confiável?
+          <span>+</span>
+        </button>
+        <div class="px-6 pb-4 hidden" id="faq5">
+          <p class="text-sm text-gray-700">
+            Sim. A Moana utiliza blockchain permissionado e contratos inteligentes para garantir integridade, conformidade e segurança nas transações.
+          </p>
+        </div>
+      </div>
+      <div class="border rounded-lg overflow-hidden">
+        <button class="w-full text-left px-6 py-4 font-semibold flex justify-between items-center hover:bg-gray-50" onclick="toggleFAQ(6)">
+          🪙 Como funciona a tokenização de créditos de carbono?
+          <span>+</span>
+        </button>
+        <div class="px-6 pb-4 hidden" id="faq6">
+          <p class="text-sm text-gray-700">
+            Cada crédito verificado é transformado em token digital rastreável via blockchain (como ERC-20), permitindo negociação segura e automática entre empresas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Rodapé -->
+<footer class="bg-gray-800 text-white text-center py-6 text-sm">
+  <p>&copy; 2025 Moana. Todos os direitos reservados.</p>
+  <p class="mt-1">Feito com 💙 pelo oceano</p>
+</footer>
+
+<script>
+  const cursor = document.getElementById('moana-cursor');
+
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.left = `${e.clientX - 12}px`;
+    cursor.style.top = `${e.clientY - 12}px`;
+  });
+
+  document.addEventListener('mousedown', () => {
+    cursor.style.transform = 'scale(1.8)';
+    cursor.style.opacity = '0.4';
+  });
+
+  document.addEventListener('mouseup', () => {
+    cursor.style.transform = 'scale(1)';
+    cursor.style.opacity = '1';
+  });
+</script>

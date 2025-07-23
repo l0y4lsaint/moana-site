@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Moana | 海洋再生，重新定义未来</title>
+
+  <!-- 字体与 Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            moana: '#5170FF',
+          },
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 7rem;
+    }
+  </style>
+
+  <script>
+  function toggleFAQ(index) {
+    const el = document.getElementById('faq' + index);
+    el.classList.toggle('hidden');
+  }
+
+</script>
+
+</head>
+<body class="font-sans bg-white text-black">
+
+  <div id="moana-cursor" class="fixed w-6 h-6 bg-moana rounded-full pointer-events-none z-50 transition-transform duration-100 ease-out"></div>
+
+  <!-- 导航栏 -->
+<nav class="bg-moana fixed top-0 left-0 w-full z-50 shadow-md">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    <!-- 左侧：Logo（可点击返回顶部） -->
+    <div class="flex-shrink-0">
+      <a href="#top" class="block">
+        <img src="assets/moana-logo.png" alt="Moana标志" class="h-12" />
+      </a>
+    </div>
+
+    <!-- 中间：导航链接 -->
+    <ul class="flex-1 flex justify-center gap-8 text-white font-semibold text-sm">
+      <li><a href="#why" class="hover:underline transition">为什么选择 Moana？</a></li>
+      <li><a href="#companies" class="hover:underline transition">适用于企业</a></li>
+      <li><a href="#emissions" class="hover:underline transition">碳排放</a></li>
+      <li><a href="#wishlist" class="hover:underline transition">候补名单</a></li>
+      <li><a href="#about" class="hover:underline transition">关于我们</a></li>
+      <li><a href="#faq" class="hover:underline transition">常见问题</a></li>
+    </ul>
+
+    <!-- 右侧：语言选择器 -->
+    <div>
+      <select onchange="location.href=this.value"
+        class="bg-moana border border-white rounded px-3 py-2 text-sm text-white font-semibold">
+        <option value="cn-index.html">🇨🇳 中文</option>
+        <option value="index.html">🌐 English</option>
+        <option value="pt-index.html">🇵🇹 Português</option>
+        <option value="es-index.html">🇪🇸 Español</option>
+      </select>
+    </div>
+  </div>
+</nav>
+
+<!-- 页面顶部锚点 -->
+<div id="top"></div>
+
+<!-- 平滑滚动设置 -->
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
+
+  <div class="pt-20"></div>
+
+  <!-- Hero 区域 -->
+  <section class="relative text-center py-64 px-6 text-white overflow-hidden">
+    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover -z-20">
+      <source src="assets/oceanbackground.mp4" type="video/mp4" />
+    </video>
+    <div class="absolute inset-0 bg-black opacity-50 -z-10"></div>
+    <div class="max-w-3xl mx-auto relative z-10">
+      <h1 class="text-4xl font-bold mb-4">海洋再生，重新定义未来</h1>
+      <p class="text-lg mb-8">Moana 是首个将企业与经认证蓝碳项目连接的数字平台，旨在实现可扩展的影响力。</p>
+      <a href="#wishlist" class="inline-block bg-moana text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition shadow-lg">加入我们的行动</a>
+    </div>
+  </section>
+
+  <!-- 为什么选择 Moana -->
+  <section id="why" class="py-20 px-6 bg-white text-black text-center">
+    <h2 class="text-3xl font-bold mb-4">为什么选择 Moana？</h2>
+    <p class="text-lg font-semibold text-moana mb-12">我们让海洋成为可投资的资产。</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+      <div class="p-6 border rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="text-lg font-semibold mb-3">♻️ 蓝碳项目认证</h3>
+        <p class="text-sm">修复海洋生态系统，真实可信地去除碳排放。</p>
+      </div>
+      <div class="p-6 border rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="text-lg font-semibold mb-3">🌍 社会与环境影响</h3>
+        <p class="text-sm">支持沿海社区，保护海洋生物多样性。</p>
+      </div>
+      <div class="p-6 border rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="text-lg font-semibold mb-3">🔗 区块链透明化</h3>
+        <p class="text-sm">每一个信用额度都可追踪、安全且可靠。</p>
+      </div>
+      <div class="p-6 border rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="text-lg font-semibold mb-3">🌊 投资海洋</h3>
+        <p class="text-sm">将海洋修复转化为可进入、可扩展的投资机会。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 为企业赋能 -->
+  <section id="companies" class="py-20 px-6 bg-gray-100 text-center text-black">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6">通过 Moana 实现 ESG 目标</h2>
+      <p class="mb-8">有远见的企业正在投资蓝碳项目，不只是为了补偿，而是对地球的承诺。</p>
+      <a href="#wishlist" class="inline-block bg-moana text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition shadow-lg">加入候补名单</a>
+    </div>
+  </section>
+
+  <!-- 碳排放 -->
+  <section id="emissions" class="py-20 px-6 bg-moana text-white text-center">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6">您的海洋产业有碳排放吗？</h2>
+      <p class="mb-8 text-lg">海岸旅游、海上运输、离岸平台等行业都可通过 Moana 转化碳足迹，实现蓝色再生。选择经过验证的项目，修复海洋生态，吸收碳排放，增强 ESG 影响力。</p>
+      <a href="#wishlist" class="inline-block bg-white text-moana px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg">探索海洋项目</a>
+    </div>
+  </section>
+
+  <section id="wishlist" class="py-20 px-6 bg-white text-black">
+  <div class="max-w-xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-6">加入候补名单</h2>
+    <p class="mb-8">成为首批了解 Moana 启动计划的支持者。</p>
+
+    <form action="https://formsubmit.co/fdf78cfb57c803f81c0440e26f4f7762" method="POST"
+      class="bg-gray-100 p-8 rounded-xl shadow-lg space-y-6 text-left">
+
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="http://127.0.0.1:5500/cn-thankyou.html">
+
+      <div>
+        <label for="name" class="block text-sm font-medium mb-1">姓名</label>
+        <input type="text" id="name" name="name" required
+          class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-moana" />
+      </div>
+      <div>
+        <label for="email" class="block text-sm font-medium mb-1">电子邮箱</label>
+        <input type="email" id="email" name="email" required
+          class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-moana" />
+      </div>
+      <div>
+        <label for="profile" class="block text-sm font-medium mb-1">您的身份</label>
+        <select id="profile" name="profile" required
+          class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-moana">
+          <option value="">请选择</option>
+          <option value="company">企业</option>
+          <option value="investor">投资人</option>
+          <option value="project">环保项目</option>
+          <option value="other">其他</option>
+        </select>
+      </div>
+      <div class="flex items-center space-x-3">
+        <input type="checkbox" id="updates" name="updates" class="w-5 h-5 text-moana" />
+        <label for="updates" class="text-sm">我希望收到未来更新</label>
+      </div>
+      <button type="submit"
+        class="w-full bg-moana text-white py-4 rounded-lg font-bold hover:bg-blue-700 transition">
+        提交
+      </button>
+    </form>
+  </div>
+</section>
+
+<section id="about" class="py-20 px-6 text-center bg-gray-100 text-black">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6">关于我们</h2>
+    <p class="text-lg leading-relaxed">
+      Moana 致力于重塑企业、自然与未来之间的关系。  
+      通过结合科学、创新与海岸修复，我们正在加速应对气候变化的现实解决方案 —— 恢复海洋生态系统，推动全球社会影响力。
+    </p>
+  </div>
+</section>
+
+<section id="faq" class="py-20 px-6 bg-white text-black">
+  <div class="max-w-3xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-6">常见问题</h2>
+    <p class="text-lg mb-12">想了解 Moana？请阅读下面的常见问题解答。</p>
+
+    <div class="space-y-4 text-left">
+      <div class="border rounded-lg overflow-hidden">
+        <button class="w-full text-left px-6 py-4 font-semibold flex justify-between items-center hover:bg-gray-50 focus:outline-none" onclick="toggleFAQ(0)">
+          🌊 什么是蓝碳？
+          <span>+</span>
+        </button>
+        <div class="px-6 pb-4 hidden" id="faq0">
+          <p class="text-sm text-gray-700">
+            蓝碳是指由红树林、海草床和盐沼等沿海生态系统吸收和储存的碳。这些环境有助于自然捕捉 CO₂，同时促进生物多样性和保护海岸线。
+          </p>
+        </div>
+      </div>
+      <div class="border rounded-lg overflow-hidden">
+        <button class="w-full text-left px-6 py-4 font-semibold flex justify-between items-center hover:bg-gray-50" onclick="toggleFAQ(1)">
+          📥 我提交的信息会如何使用？
+          <span>+</span>
+        </button>
+        <div class="px-6 pb-4 hidden" id="faq1">
+          <p class="text-sm text-gray-700">
+            您的信息仅用于向您发送 Moana 的启动动态和更新内容。我们非常重视隐私，不会发送垃圾邮件或与第三方分享数据。
+          </p>
+        </div>
+      </div>
+      <div class="border rounded-lg overflow-hidden">
+        <button class="w-full text-left px-6 py-4 font-semibold flex justify-between items-center hover:bg-gray-50" onclick="toggleFAQ(2)">
+          🎯 Moana 是一个非营利组织吗？
+          <span>+</span>
+        </button>
+        <div class="px-6 pb-4 hidden" id="faq2">
+          <p class="text-sm text-gray-700">
+            Moana 是一家以使命驱动的企业，专注于气候创新和海洋生态恢复。我们并非传统意义上的非营利组织，而是通过科技与市场机制实现可持续影响力。
+          </p>
+        </div>
+      </div>
+      <div class="border rounded-lg overflow-hidden">
+        <button class="w-full text-left px-6 py-4 font-semibold flex justify-between items-center hover:bg-gray-50" onclick="toggleFAQ(3)">
+          💼 我可以如何参与或合作？
+          <span>+</span>
+        </button>
+        <div class="px-6 pb-4 hidden" id="faq3">
+          <p class="text-sm text-gray-700">
+            您可以注册加入候补名单、推荐海洋项目，或与我们开展合作。我们欢迎投资人、环保组织和企业的参与。
+          </p>
+        </div>
+      </div>
+      <div class="border rounded-lg overflow-hidden">
+        <button class="w-full text-left px-6 py-4 font-semibold flex justify-between items-center hover:bg-gray-50" onclick="toggleFAQ(4)">
+          📊 Moana 的项目如何运作？
+          <span>+</span>
+        </button>
+        <div class="px-6 pb-4 hidden" id="faq4">
+          <p class="text-sm text-gray-700">
+            我们与经过国际认证的海洋恢复项目合作，每项活动都经过碳移除测量、生物影响评估及独立审计，确保透明度和真实效益。
+          </p>
+        </div>
+      </div>
+      <div class="border rounded-lg overflow-hidden">
+        <button class="w-full text-left px-6 py-4 font-semibold flex justify-between items-center hover:bg-gray-50" onclick="toggleFAQ(5)">
+          🔐 平台是否安全可信？
+          <span>+</span>
+        </button>
+        <div class="px-6 pb-4 hidden" id="faq5">
+          <p class="text-sm text-gray-700">
+            是的。Moana 使用许可型区块链与智能合约进行验证和交易结算，保障每笔交易的安全性和合规性。
+          </p>
+        </div>
+      </div>
+      <div class="border rounded-lg overflow-hidden">
+        <button class="w-full text-left px-6 py-4 font-semibold flex justify-between items-center hover:bg-gray-50" onclick="toggleFAQ(6)">
+          🪙 如何通过区块链进行碳信用交易？
+          <span>+</span>
+        </button>
+        <div class="px-6 pb-4 hidden" id="faq6">
+          <p class="text-sm text-gray-700">
+            Moana 将经过验证的碳信用通过区块链进行代币化，每个信用额度对应一个可追踪数字代币（如 ERC-20）。这样可以实现实时交易、安全存储和自动结算。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-gray-800 text-white text-center py-6 text-sm">
+  <p>&copy; 2025 Moana 版权所有</p>
+  <p class="mt-1">用 💙 守护海洋，与世界同行</p>
+</footer>
+
+<script>
+  const cursor = document.getElementById('moana-cursor');
+
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.left = `${e.clientX - 12}px`;
+    cursor.style.top = `${e.clientY - 12}px`;
+  });
+
+  document.addEventListener('mousedown', () => {
+    cursor.style.transform = 'scale(1.8)';
+    cursor.style.opacity = '0.4';
+  });
+
+  document.addEventListener('mouseup', () => {
+    cursor.style.transform = 'scale(1)';
+    cursor.style.opacity = '1';
+  });
+</script>
